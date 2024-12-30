@@ -1,0 +1,9 @@
+const password="Password";
+const passwordHind="**********";
+const email="Email";
+const emailHint="name@gmail.com";
+const forget="Forget Password?";
+const login="Log in";
+const signup="Sign up";
+const createNew="or create a new account";
+const loginWith="Log in with";
