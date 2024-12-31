@@ -6,6 +6,6 @@ Widget ButtonReg(onPress,color,textColor,String? title){
       backgroundColor: color,
       padding: const EdgeInsets.all(12),
     ),
-    onPressed: (){onPress;},child: title!.text.color(textColor).make(),
+    onPressed: onPress,child: title!.text.color(textColor).make(),
   );
 }

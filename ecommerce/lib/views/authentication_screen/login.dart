@@ -1,6 +1,5 @@
 import 'package:ecommerce/consts/list.dart';
 import 'package:ecommerce/widgets_common/app_logo.dart';
-import 'package:flutter/material.dart';
 import 'package:ecommerce/consts/consts.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -10,6 +9,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Back(
         child: Scaffold(
+          resizeToAvoidBottomInset: false,
           body: Center(
             child: Column(
               children: [
@@ -29,7 +29,7 @@ class LoginScreen extends StatelessWidget {
                     8.heightBox,
                     createNew.text.make(),
                     8.heightBox,
-                    ButtonReg((){}, Colors.white54, Colors.black, signup).box.width(context.screenWidth-50).make(),
+                    ButtonReg((){Get.to(()=>const Signup());}, Colors.white54, Colors.black, signup).box.width(context.screenWidth-50).make(),
                     12.heightBox,
                     loginWith.text.make(),
                     8.heightBox,
@@ -44,7 +44,7 @@ class LoginScreen extends StatelessWidget {
                       ),)),
                     )
                   ],
-                ).box.white.rounded.padding(const EdgeInsets.all(16)).width(context.screenWidth-70).make()
+                ).box.white.rounded.padding(const EdgeInsets.all(16)).width(context.screenWidth-70).shadowSm.make()
               ],
             ),
           ),
