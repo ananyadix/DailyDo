@@ -1,4 +1,5 @@
 import 'package:ecommerce/consts/list.dart';
+import 'package:ecommerce/views/home_screen/home.dart';
 import 'package:ecommerce/widgets_common/app_logo.dart';
 import 'package:ecommerce/consts/consts.dart';
 
@@ -25,7 +26,7 @@ class LoginScreen extends StatelessWidget {
                         child:TextButton(onPressed: (){}, child: forget.text.make()),
                     ),
                     8.heightBox,
-                    ButtonReg((){},Colors.yellowAccent,Colors.white,login).box.width(context.screenWidth-50).make(),
+                    ButtonReg((){Get.to(()=>const HomeScreen());},Colors.yellowAccent,Colors.white,login).box.width(context.screenWidth-50).make(),
                     8.heightBox,
                     createNew.text.make(),
                     8.heightBox,

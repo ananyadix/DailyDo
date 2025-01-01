@@ -6,5 +6,4 @@ export 'package:ecommerce/widgets_common/back.dart';
 export './string.dart';
 export 'package:ecommerce/widgets_common/custom_textfield.dart';
 export 'package:ecommerce/widgets_common/button.dart';
-export 'package:ecommerce/consts/images.dart';
 export 'package:ecommerce/views/authentication_screen/signup.dart';

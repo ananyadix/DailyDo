@@ -2,9 +2,15 @@ import 'package:ecommerce/consts/consts.dart';
 import 'package:ecommerce/widgets_common/app_logo.dart';
 import 'package:ecommerce/views/authentication_screen/login.dart';
 
-class Signup extends StatelessWidget {
+class Signup extends StatefulWidget {
   const Signup({super.key});
 
+  @override
+  State<Signup> createState() => _SignupState();
+}
+
+class _SignupState extends State<Signup> {
+  bool? isCheck=false;
   @override
   Widget build(BuildContext context) {
     return Back(
@@ -25,7 +31,9 @@ class Signup extends StatelessWidget {
                     5.heightBox,
                     Row(
                       children: [
-                        Checkbox(value: false, onChanged: (newValue){},checkColor: Colors.yellowAccent,),
+                        Checkbox(value: isCheck, onChanged: (newValue){setState(() {
+                          isCheck=newValue;
+                        });},checkColor: Colors.yellowAccent,),
                         10.widthBox,
                         Expanded(child: RichText(
                           text: const TextSpan(children: [
@@ -58,7 +66,7 @@ class Signup extends StatelessWidget {
                       ],
                     ),
                     8.heightBox,
-                    ButtonReg((){},Colors.yellowAccent,Colors.white,signup).box.width(context.screenWidth-50).make(),
+                    ButtonReg((){},isCheck==true? Colors.yellowAccent: Colors.grey,Colors.white,signup).box.width(context.screenWidth-50).make(),
                     8.heightBox,
                     RichText(text: const TextSpan(
                         children: [
