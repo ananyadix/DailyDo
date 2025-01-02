@@ -7,3 +7,5 @@ export './string.dart';
 export 'package:ecommerce/widgets_common/custom_textfield.dart';
 export 'package:ecommerce/widgets_common/button.dart';
 export 'package:ecommerce/views/authentication_screen/signup.dart';
+export 'package:ecommerce/widgets_common/featur_button.dart';
+export 'package:ecommerce/widgets_common/top_button.dart';
