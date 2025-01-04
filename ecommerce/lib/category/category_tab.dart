@@ -11,11 +11,11 @@ class CategoryTab extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: "Categories".text.white.make(),
-        backgroundColor: Colors.yellowAccent,
+        backgroundColor: Colors.yellow,
         elevation: 0,
       ),
       body: Container(
-        padding: EdgeInsets.all(12),
+        padding: EdgeInsets.all(15),
         child: GridView.builder(gridDelegate:const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount:3,mainAxisSpacing: 8,crossAxisSpacing: 8,mainAxisExtent: 200 ,),itemCount: categoryImages.length, itemBuilder: (context,index){
           return Column(
             children: [
