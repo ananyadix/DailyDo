@@ -19,3 +19,5 @@ const categoryImages=["assets/images/veg&fru.png","assets/images/attadal.png","a
 "assets/images/sweets.png","assets/images/drinks.png","assets/images/tea.png","assets/images/sauce.png","assets/images/icecream.png",
 "assets/images/bat&body.png","assets/images/hair.png","assets/images/skin.png","assets/images/comatic.png","assets/images/feminine.png",
 "assets/images/baby.png","assets/images/med.png","assets/images/home.png","assets/images/clean.png","assets/images/sta.png"];
+
+const detail=["Video","Review","Return Policy","Similar Products"];
