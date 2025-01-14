@@ -24,3 +24,4 @@ const haldiram="assets/images/haldiram.png";
 const coffee="assets/images/coffee.png";
 const aqua="assets/images/aqua.png";
 const chemist="assets/images/chemist.png";
+const account="assets/images/account_back.png";

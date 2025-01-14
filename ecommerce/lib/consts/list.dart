@@ -21,3 +21,6 @@ const categoryImages=["assets/images/veg&fru.png","assets/images/attadal.png","a
 "assets/images/baby.png","assets/images/med.png","assets/images/home.png","assets/images/clean.png","assets/images/sta.png"];
 
 const detail=["Video","Review","Return Policy","Similar Products"];
+const accountMy=["Your Orders","Message","Address Book","Collected Coupons"];
+const accountImg=["assets/images/material-symbols_order-play-rounded.png","assets/images/ic_baseline-message.png","assets/images/tabler_address-book.png",
+"assets/images/icon-park-outline_collection-records.png"];
