@@ -10,3 +10,4 @@ export 'package:ecommerce/views/authentication_screen/signup.dart';
 export 'package:ecommerce/widgets_common/featur_button.dart';
 export 'package:ecommerce/widgets_common/top_button.dart';
 export 'package:ecommerce/widgets_common/detail.dart';
+export 'package:ecommerce/consts/firebase_consts.dart';

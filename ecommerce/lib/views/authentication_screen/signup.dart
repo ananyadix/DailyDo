@@ -1,4 +1,6 @@
 import 'package:ecommerce/consts/consts.dart';
+import 'package:ecommerce/controller/auth_controller.dart';
+import 'package:ecommerce/views/home_screen/home.dart';
 import 'package:ecommerce/widgets_common/app_logo.dart';
 import 'package:ecommerce/views/authentication_screen/login.dart';
 
@@ -11,6 +13,11 @@ class Signup extends StatefulWidget {
 
 class _SignupState extends State<Signup> {
   bool? isCheck=false;
+  var controller=Get.put(AuthController());
+  var nameC=TextEditingController();
+  var emailC=TextEditingController();
+  var passwordC=TextEditingController();
+  var passwordRetryC=TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Back(
@@ -24,10 +31,10 @@ class _SignupState extends State<Signup> {
                 10.heightBox,
                 Column(
                   children: [
-                    CustomTextField(name,nameHint),
-                    CustomTextField(email,emailHint),
-                    CustomTextField(password, passwordHind),
-                    CustomTextField(retry, passwordHind),
+                    CustomTextField(name,nameHint,nameC,false),
+                    CustomTextField(email,emailHint,emailC,false),
+                    CustomTextField(password, passwordHind,passwordC,true),
+                    CustomTextField(retry, passwordHind,passwordRetryC,true),
                     5.heightBox,
                     Row(
                       children: [
@@ -66,7 +73,21 @@ class _SignupState extends State<Signup> {
                       ],
                     ),
                     8.heightBox,
-                    ButtonReg((){},isCheck==true? Colors.yellowAccent: Colors.grey,Colors.white,signup).box.width(context.screenWidth-50).make(),
+                    ButtonReg(() async{
+                      if(isCheck!=false){
+                        try{
+                          await controller.signupMethod(email: emailC.text,password: passwordC.text,context: context).then((value){
+                            return controller.storeUserData(uname: nameC.text,uemail: emailC.text,upassword: passwordC.text);
+                          }).then((value){
+                            VxToast.show(context, msg: "Successfully Signed in");
+                            Get.offAll(()=>HomeScreen());
+                          });
+                        }catch(e){
+                          auth.signOut();
+                          VxToast.show(context, msg:e.toString());
+                        }
+                      }
+                    },isCheck==true? Colors.yellowAccent: Colors.grey,Colors.white,signup).box.width(context.screenWidth-50).make(),
                     8.heightBox,
                     RichText(text: const TextSpan(
                         children: [

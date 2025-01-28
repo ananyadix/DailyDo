@@ -1,5 +1,7 @@
 import 'package:ecommerce/consts/consts.dart';
 import 'package:ecommerce/consts/list.dart';
+import 'package:ecommerce/controller/auth_controller.dart';
+import 'package:ecommerce/views/authentication_screen/login.dart';
 
 class AccountTab extends StatelessWidget {
   const AccountTab({super.key});
@@ -28,7 +30,10 @@ class AccountTab extends StatelessWidget {
                         "ananya.dixit1104@gmail.com".text.color(Colors.black).make(),
                       ],
                     )),
-                    OutlinedButton(onPressed: (){}, child: "Log Out".text.color(Colors.black).make(),
+                    OutlinedButton(onPressed: ()async{
+                      await Get.put(AuthController());
+                      Get.offAll(()=>const LoginScreen());
+                    }, child: "Log Out".text.color(Colors.black).make(),
                     style: OutlinedButton.styleFrom(
                       side: BorderSide(
                         color: Colors.black

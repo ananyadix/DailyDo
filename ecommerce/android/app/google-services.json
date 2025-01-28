@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "975793259598",
+    "project_id": "dailydo-56525",
+    "storage_bucket": "dailydo-56525.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975793259598:android:caf3d241c6b75b655d2f1f",
+        "android_client_info": {
+          "package_name": "com.example.ecommerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCynaT4FJVKeasTBMTCH0a45065zcQ7Ft0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

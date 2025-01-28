@@ -1,4 +1,5 @@
 import 'package:ecommerce/consts/list.dart';
+import 'package:ecommerce/controller/auth_controller.dart';
 import 'package:ecommerce/views/home_screen/home.dart';
 import 'package:ecommerce/widgets_common/app_logo.dart';
 import 'package:ecommerce/consts/consts.dart';
@@ -8,6 +9,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var controller=Get.put(AuthController());
     return Back(
         child: Scaffold(
           resizeToAvoidBottomInset: false,
@@ -19,14 +21,19 @@ class LoginScreen extends StatelessWidget {
                 10.heightBox,
                 Column(
                   children: [
-                    CustomTextField(email,emailHint),
-                    CustomTextField(password,passwordHind),
+                    CustomTextField(email,emailHint,controller.emailC,false),
+                    CustomTextField(password,passwordHind,controller.passwordC,true),
                     Align(
                         alignment:Alignment.centerRight,
                         child:TextButton(onPressed: (){}, child: forget.text.make()),
                     ),
                     8.heightBox,
-                    ButtonReg((){Get.to(()=>const HomeScreen());},Colors.yellowAccent,Colors.white,login).box.width(context.screenWidth-50).make(),
+                    ButtonReg(()async{await controller.loginMethod(context: context).then((value){
+                      if(value!=null){
+                        VxToast.show(context, msg: "Successfully Loggedin");
+                        Get.offAll(()=>HomeScreen());
+                      }
+                    });},Colors.yellowAccent,Colors.white,login).box.width(context.screenWidth-50).make(),
                     8.heightBox,
                     createNew.text.make(),
                     8.heightBox,
