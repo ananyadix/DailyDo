@@ -1,0 +1,92 @@
+{
+  "categories": [
+    {
+      "name": "Vegitables & Fruits",
+      "subcategory": ["Fresh Vegitables", "Fresh Fruits", "Exotics"]
+    },
+    {
+      "name": "Atta,Rice & Dal",
+      "subcategory": ["Atta","Rice","Dal","Rajma-Chhole","Besan-Sooji"]
+    },
+    {
+      "name": "Oil & Masalas",
+      "subcategory": ["Oil","Desi Ghee","Masalas"]
+    },
+    {
+      "name": "Dairy Items",
+      "subcategory": ["Milk","Breads","Eggs","Curd & Yogurt","Cheese & Butter","Paneer & Tofu"]
+    },
+    {
+      "name": "Bakery & Biscuits",
+      "subcategory": ["Cookies","Cakes","Wafers","Cakes & Rolls"]
+    },
+    {
+      "name": "Dry Fruits",
+      "subcategory": ["Dry Fruits","Cerials","Oats"]
+    },
+    {
+      "name": "Chips & Namkeen",
+      "subcategory": ["Chips","Namkeen","Papad & Fryums","Popcorn"]
+    },
+    {
+      "name": "Sweets & Chocolates",
+      "subcategory": ["Chocolates","Candies","Indian Sweets"]
+    },
+    {
+      "name": "Drinks & Juice",
+      "subcategory": ["Soft Drinks","Juices","Soda & Mixers","Water"]
+    },
+    {
+      "name": "Tea & Coffee",
+      "subcategory": ["Tea","Coffee","Hot Chocolate"]
+    },
+    {
+      "name": "Sauces & Spreads",
+      "subcategory": ["Ketchup","Jam & Spreads","Honey","Syrups","Dips"]
+    },
+    {
+      "name":"Ice Creams",
+      "subcategory": ["Tubs","Cone","Stick"]
+    },
+    {
+      "name": "Bath & Body",
+      "subcategory": ["Soap","Shower Gel","Oral Care","Face Wash","Hand Wash"]
+    },
+    {
+      "name": "Hair",
+      "subcategory": ["Shampoo","Conditioner","Oil","Serum"]
+    },
+    {
+      "name": "Skin & Face",
+      "subcategory": ["Body Lotion","Creams & Serums","Face Scrubs"]
+    },
+    {
+      "name": "Beauty & Cosmetics",
+      "subcategory": ["Lipsticks & Glosses","Cleanser","Makeup","Kajal & Eyeliner","Nail Paint"]
+    },
+    {
+      "name": "Feminine Hygiene",
+      "subcategory": ["Sanitary Pads","Tampons","Hair Removal"]
+    },
+    {
+      "name": "Baby Care",
+      "subcategory": ["Diaper & Wipes","Baby Food","Bath Products","Health & Hygiene"]
+    },
+    {
+      "name": "Health & Pharma",
+      "subcategory": ["Digestive Care","Cough & Cold","Pain Relief","Bandaid","Suppliments"]
+    },
+    {
+      "name": "Home & Lifestyle",
+      "subcategory": ["Home Need","Disposals","Freshners"]
+    },
+    {
+      "name": "Cleaners",
+      "subcategory": ["Detergent","Dishwashers","Toilet Cleaners","Floor Cleaners","Glass Cleaners"]
+    },
+    {
+      "name": "Stationary",
+      "subcategory": ["Notebooks","Pen & Pencils","Glue & Tape"]
+    }
+  ]
+}

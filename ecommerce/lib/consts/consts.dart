@@ -11,3 +11,4 @@ export 'package:ecommerce/widgets_common/featur_button.dart';
 export 'package:ecommerce/widgets_common/top_button.dart';
 export 'package:ecommerce/widgets_common/detail.dart';
 export 'package:ecommerce/consts/firebase_consts.dart';
+export 'package:ecommerce/services/firestore_services.dart';

@@ -4,6 +4,7 @@ import 'package:ecommerce/category/category_tab.dart';
 import 'package:ecommerce/consts/consts.dart';
 import 'package:ecommerce/controller/home_controller.dart';
 import 'package:ecommerce/views/home_screen/home_tab.dart';
+import 'package:ecommerce/widgets_common/exit.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -23,26 +24,32 @@ class HomeScreen extends StatelessWidget {
       CartTab(),
       AccountTab()
     ];
-    return Scaffold(
-      body: Column(
-        children: [
-          Obx(
-          ()=> Expanded(
-              child: navBody.elementAt(controller.currentNav.value),
+    return WillPopScope(
+      onWillPop: () async{
+        showDialog(context: context, builder: (context)=>ExitPop(context),barrierDismissible: false);
+        return false;
+      },
+      child: Scaffold(
+        body: Column(
+          children: [
+            Obx(
+            ()=> Expanded(
+                child: navBody.elementAt(controller.currentNav.value),
+              ),
             ),
+          ],
+        ),
+        bottomNavigationBar: Obx(
+          ()=> BottomNavigationBar(
+            currentIndex: controller.currentNav.value,
+            items: NavigationItem,
+            backgroundColor: Colors.white,
+            type: BottomNavigationBarType.fixed,
+            selectedItemColor: Colors.yellowAccent,
+            onTap: (value){
+              controller.currentNav.value=value;
+            },
           ),
-        ],
-      ),
-      bottomNavigationBar: Obx(
-        ()=> BottomNavigationBar(
-          currentIndex: controller.currentNav.value,
-          items: NavigationItem,
-          backgroundColor: Colors.white,
-          type: BottomNavigationBarType.fixed,
-          selectedItemColor: Colors.yellowAccent,
-          onTap: (value){
-            controller.currentNav.value=value;
-          },
         ),
       ),
     );

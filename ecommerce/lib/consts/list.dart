@@ -24,3 +24,5 @@ const detail=["Video","Review","Return Policy","Similar Products"];
 const accountMy=["Your Orders","Message","Address Book","Collected Coupons"];
 const accountImg=["assets/images/material-symbols_order-play-rounded.png","assets/images/ic_baseline-message.png","assets/images/tabler_address-book.png",
 "assets/images/icon-park-outline_collection-records.png"];
+const pay=["PayPal","PhonePe","Cash on Delivery"];
+const payImg=["https://i.pcmag.com/imagery/reviews/068BjcjwBw0snwHIq0KNo5m-15..v1602794215.png","https://inc42.com/cdn-cgi/image/quality=75/https://asset.inc42.com/2018/01/phonepe1.jpg","https://cc-west-usa.oss-accelerate.aliyuncs.com/postsAndPages/2019/06/timg-1.jpg"];

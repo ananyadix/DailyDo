@@ -19,40 +19,47 @@ class LoginScreen extends StatelessWidget {
                 (context.screenHeight * 0.1).heightBox,
                 AppLogo(),
                 10.heightBox,
-                Column(
-                  children: [
-                    CustomTextField(email,emailHint,controller.emailC,false),
-                    CustomTextField(password,passwordHind,controller.passwordC,true),
-                    Align(
-                        alignment:Alignment.centerRight,
-                        child:TextButton(onPressed: (){}, child: forget.text.make()),
-                    ),
-                    8.heightBox,
-                    ButtonReg(()async{await controller.loginMethod(context: context).then((value){
-                      if(value!=null){
-                        VxToast.show(context, msg: "Successfully Loggedin");
-                        Get.offAll(()=>HomeScreen());
-                      }
-                    });},Colors.yellowAccent,Colors.white,login).box.width(context.screenWidth-50).make(),
-                    8.heightBox,
-                    createNew.text.make(),
-                    8.heightBox,
-                    ButtonReg((){Get.to(()=>const Signup());}, Colors.white54, Colors.black, signup).box.width(context.screenWidth-50).make(),
-                    12.heightBox,
-                    loginWith.text.make(),
-                    8.heightBox,
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: List.generate(3, (index) => Padding(padding: const EdgeInsets.all(8.0),
-                      child: CircleAvatar(
-                        backgroundColor: Colors.white70,
-                        radius: 25,
-                        child: Image.asset(social[index],
-                        width: 30,),
-                      ),)),
-                    )
-                  ],
-                ).box.white.rounded.padding(const EdgeInsets.all(16)).width(context.screenWidth-70).shadowSm.make()
+                Obx(
+                    ()=> Column(
+                    children: [
+                      CustomTextField(email,emailHint,controller.emailC,false),
+                      CustomTextField(password,passwordHind,controller.passwordC,true),
+                      Align(
+                          alignment:Alignment.centerRight,
+                          child:TextButton(onPressed: (){}, child: forget.text.make()),
+                      ),
+                      8.heightBox,
+                      controller.isLoading.value? const CircularProgressIndicator(valueColor: AlwaysStoppedAnimation(Colors.yellow),):
+                      ButtonReg(()async{controller.isLoading(true);
+                        await controller.loginMethod(context: context).then((value){
+                        if(value!=null){
+                          VxToast.show(context, msg: "Successfully Loggedin");
+                          Get.offAll(()=>HomeScreen());
+                        }
+                        else{
+                          controller.isLoading(false);
+                        }
+                      });},Colors.yellowAccent,Colors.white,login).box.width(context.screenWidth-50).make(),
+                      8.heightBox,
+                      createNew.text.make(),
+                      8.heightBox,
+                      ButtonReg((){Get.to(()=>const Signup());}, Colors.white54, Colors.black, signup).box.width(context.screenWidth-50).make(),
+                      12.heightBox,
+                      loginWith.text.make(),
+                      8.heightBox,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: List.generate(3, (index) => Padding(padding: const EdgeInsets.all(8.0),
+                        child: CircleAvatar(
+                          backgroundColor: Colors.white70,
+                          radius: 25,
+                          child: Image.asset(social[index],
+                          width: 30,),
+                        ),)),
+                      )
+                    ],
+                  ).box.white.rounded.padding(const EdgeInsets.all(16)).width(context.screenWidth-70).shadowSm.make(),
+                )
               ],
             ),
           ),

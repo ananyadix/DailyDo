@@ -1,12 +1,14 @@
 import 'package:ecommerce/category/category_detail.dart';
 import 'package:ecommerce/consts/consts.dart';
 import 'package:ecommerce/consts/list.dart';
+import 'package:ecommerce/controller/poduct_controller.dart';
 
 class CategoryTab extends StatelessWidget {
   const CategoryTab({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var controller=Get.put(ProductController());
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -27,6 +29,7 @@ class CategoryTab extends StatelessWidget {
               categoris[index].text.color(Colors.grey).align(TextAlign.center).make()
             ],
           ).box.rounded.color(Colors.black12).clip(Clip.antiAlias).make().onTap(() {
+            controller.getSubcategory(categoris[index]);
             Get.to(()=>CategoryDetail(title: categoris[index]));
           });
         }),
